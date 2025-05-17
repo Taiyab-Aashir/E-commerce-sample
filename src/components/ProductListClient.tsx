@@ -6,7 +6,7 @@ import ProductCard from "@/components/ProductCard";
 import { Product } from "@/types/product";
 import "@/styles/loader.css";
 
-const PAGE_SIZE = 12;
+const PAGE_SIZE = 20;
 
 interface ProductsResponse {
   products: Product[];
@@ -87,14 +87,17 @@ export default function ProductListClient({
           page.products.map((product) => (
             <div
               key={product.id}
-              className="transition-transform duration-300 transform-gpu hover:scale-105 hover:rotate-[1deg] hover:shadow-2xl"
+              className="rounded-lg transition-transform duration-300 transform-gpu hover:scale-105 hover:rotate-[1deg] hover:shadow-2xl"
             >
               <ProductCard product={product} />
             </div>
           ))
         )}
       </div>
-      <div ref={loadMoreRef} className="h-12 flex items-center justify-center">
+      <div
+        ref={loadMoreRef}
+        className="h-12 flex items-center justify-center mt-2"
+      >
         {isFetchingNextPage && <div className="loader" />}
         {!hasNextPage && !isLoading && (
           <span className="text-gray-400">No more products</span>

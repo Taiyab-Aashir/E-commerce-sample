@@ -27,7 +27,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <div
-      className="group relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+      className="group relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden h-full"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

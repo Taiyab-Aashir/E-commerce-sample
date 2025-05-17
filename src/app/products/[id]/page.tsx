@@ -169,6 +169,14 @@ export default function ProductDetail({ params }: ProductDetailProps) {
                     {product.stock} units
                   </span>
                 </div>
+                <div className="flex justify-between">
+                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                    Discount
+                  </span>
+                  <span className="text-sm font-medium text-gray-900 dark:text-white">
+                    {product.discountPercentage} %
+                  </span>
+                </div>
               </div>
             </div>
           </div>
